@@ -46,6 +46,7 @@ Um aplicativo web simples e eficiente para gerenciar suas tarefas diárias, dese
 
 6. **Acesse no navegador:**
    [http://localhost:XXXX/Tarefas](http://localhost:XXXX/Tarefas)
+   
    O número será criado ao utilizar o comando dotnet run, então substitua os valores de "XXXX"
 
 ## 📂 Estrutura Principal
