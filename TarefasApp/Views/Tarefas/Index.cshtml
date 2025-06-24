@@ -1,0 +1,28 @@
+@model List<TarefasApp.Models.Tarefa>
+
+<h1>Lista de Tarefas</h1>
+
+<a href="/Tarefas/Create">Nova Tarefa</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Concluída</th>
+        <th>Ações</th>
+    </tr>
+@foreach (var tarefa in Model)
+{
+    <tr>
+        <td>@tarefa.Id</td>
+        <td>@tarefa.Titulo</td>
+        <td>@tarefa.Descricao</td>
+        <td>@tarefa.Concluida</td>
+        <td>
+            <a href="/Tarefas/Edit/@tarefa.Id">Editar</a> |
+            <a href="/Tarefas/Delete/@tarefa.Id">Excluir</a>
+        </td>
+    </tr>
+}
+</table>
