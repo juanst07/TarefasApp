@@ -2,7 +2,7 @@
 
 Bem-vindo ao **TarefasApp**! 🚀
 
-Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, desenvolvido com ASP.NET Core MVC, Entity Framework Core (SQLite) e visual inovador com Bootstrap. Organize, crie, edite, conclua e exclua tarefas de forma prática e estilosa! 
+Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, desenvolvido com ASP.NET Core MVC, Entity Framework Core (MySQL) e visual inovador com Bootstrap. Organize, crie, edite, conclua e exclua tarefas de forma prática e estilosa!
 
 ## ✨ Funcionalidades
 
@@ -11,8 +11,8 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 - ✏️ Edição de tarefas existentes
 - ✅ Marcação de tarefas como concluídas (com botão interativo)
 - ❌ Exclusão de tarefas com confirmação
-- 🔍 Filtro e busca por título (inovação)
-- 🌙 Modo escuro (inovação)
+- 🔍 Filtro e busca por título
+- 🌙 Modo escuro
 - 📱 Layout responsivo para celular/tablet
 - 🎨 Interface com emotes, cores suaves e feedback visual
 
@@ -20,7 +20,7 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 
 - ASP.NET Core MVC
 - Entity Framework Core
-- SQLite
+- MySQL (via Pomelo)
 - Bootstrap 5
 - HTML5, CSS3 customizado
 - jQuery (para interações)
@@ -29,11 +29,15 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 
 1. **Pré-requisitos:**
    - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+   - MySQL Server rodando e banco criado (`tarefasapp`)
 
-2. **Clone o repositório:**
-   ```bash
-   git clone <url-do-repositorio>
-   ```
+2. **Configure a conexão:**
+   - Edite o arquivo `appsettings.json` com os dados do seu MySQL:
+     ```json
+     "ConnectionStrings": {
+       "DefaultConnection": "server=localhost;database=tarefasapp;user=arthur;password=121212;"
+     }
+     ```
 
 3. **Restaure os pacotes:**
    ```bash
@@ -61,6 +65,19 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 - `Data/` - Contexto do banco de dados
 - `wwwroot/` - Arquivos estáticos (CSS, JS, Bootstrap)
 
+## 🗄️ Diagrama da Tabela MySQL
+
+```
++-----------+--------------+-----------+-----------------------------+
+|   Campo   |    Tipo      |  Chave    |         Observação          |
++-----------+--------------+-----------+-----------------------------+
+| Id        | INT          | PK        | Auto incremento             |
+| Titulo    | VARCHAR(255) |           | Não nulo                    |
+| Descricao | VARCHAR(255) |           | Não nulo                    |
+| Concluida | TINYINT(1)   |           | Não nulo (0 = não, 1 = sim) |
++-----------+--------------+-----------+-----------------------------+
+```
+
 ## 🖼️ Telas
 
 - **Lista de Tarefas:** Visualize, filtre e busque tarefas
@@ -69,7 +86,7 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 - **Excluir Tarefa:** Remova tarefas com confirmação
 - **Modo Escuro:** Ative para uma experiência confortável à noite
 
-## 💡 Inovações e Extras
+## 💡 Extras
 
 - Filtro e busca instantânea por título
 - Modo escuro com alternância
@@ -77,10 +94,6 @@ Um aplicativo web moderno e eficiente para gerenciar suas tarefas diárias, dese
 - Layout 100% responsivo
 - Botão de concluir estilizado e funcional
 
-## 📸 Exemplos de Telas
-
-> Adicione aqui prints das telas do sistema para valorizar ainda mais seu projeto!
-
 ---
 
-Feito com 💙 por Arthur
+Feito por Arthur Gomes
