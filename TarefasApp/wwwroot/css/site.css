@@ -1,10 +1,11 @@
 html {
-  font-size: 14px;
+  font-size: 15px;
+  background: #f8fafc;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -12,11 +13,73 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
+  background: #f8fafc;
+  transition: background 0.3s, color 0.3s;
+}
+
+.table-success {
+  background-color: #d1e7dd !important;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+h1, h5 {
+  font-weight: 600;
+}
+
+.delete-info-box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 #0001;
+  color: #222;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #181a1b;
+  color: #f1f1f1;
+}
+body.dark-mode .card,
+body.dark-mode .table {
+  background: #23272b;
+  color: #f1f1f1;
+}
+body.dark-mode .table-success {
+  background-color: #2e4d3a !important;
+  color: #fff !important;
+}
+body.dark-mode .navbar,
+body.dark-mode .footer {
+  background: #23272b !important;
+  color: #f1f1f1;
+}
+body.dark-mode .btn,
+body.dark-mode .form-control {
+  background: #23272b;
+  color: #f1f1f1;
+  border-color: #444;
+}
+body.dark-mode .btn-primary {
+  background: #375a7f;
+  border-color: #375a7f;
+}
+body.dark-mode .btn-success {
+  background: #00bc8c;
+  border-color: #00bc8c;
+}
+body.dark-mode .btn-danger {
+  background: #e74c3c;
+  border-color: #e74c3c;
+}
+body.dark-mode td, body.dark-mode th {
+  color: #fff !important;
+}
+body.dark-mode .delete-info-box {
+  background: #23272b;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px 0 #0008;
 }

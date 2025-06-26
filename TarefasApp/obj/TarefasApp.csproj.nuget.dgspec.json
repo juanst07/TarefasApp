@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alunos\\Documents\\arthur 2025\\TarefasApp\\TarefasApp.csproj": {}
+    "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alunos\\Documents\\arthur 2025\\TarefasApp\\TarefasApp.csproj": {
+    "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alunos\\Documents\\arthur 2025\\TarefasApp\\TarefasApp.csproj",
+        "projectUniqueName": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
         "projectName": "TarefasApp",
-        "projectPath": "C:\\Users\\Alunos\\Documents\\arthur 2025\\TarefasApp\\TarefasApp.csproj",
+        "projectPath": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
         "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alunos\\Documents\\arthur 2025\\TarefasApp\\obj\\",
+        "outputPath": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,21 +37,22 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[9.0.6, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[8.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
@@ -73,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

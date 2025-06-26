@@ -13,7 +13,13 @@ namespace TarefasApp.Controllers
             _context = context;
         }
 
-        public IActionResult Index() => View(_context.Tarefas.ToList());
+        public IActionResult Index(string filtro)
+        {
+            var tarefas = string.IsNullOrEmpty(filtro)
+                ? _context.Tarefas.ToList()
+                : _context.Tarefas.Where(t => t.Titulo.Contains(filtro)).ToList();
+            return View(tarefas);
+        }
 
         public IActionResult Create() => View();
 
@@ -34,16 +40,42 @@ namespace TarefasApp.Controllers
         [HttpPost]
         public IActionResult Edit(Tarefa tarefa)
         {
+            // Corrige o checkbox de concluída: se não vier no POST, define como false
+            tarefa.Concluida = Request.Form["Concluida"] == "true";
             _context.Tarefas.Update(tarefa);
             _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public IActionResult ToggleConcluida(int id)
+        {
+            var tarefa = _context.Tarefas.Find(id);
+            if (tarefa != null)
+            {
+                tarefa.Concluida = !tarefa.Concluida;
+                _context.SaveChanges();
+            }
             return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Delete(int id)
         {
             var tarefa = _context.Tarefas.Find(id);
-            _context.Tarefas.Remove(tarefa);
-            _context.SaveChanges();
+            if (tarefa == null)
+                return NotFound();
+            return View(tarefa);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var tarefa = _context.Tarefas.Find(id);
+            if (tarefa != null)
+            {
+                _context.Tarefas.Remove(tarefa);
+                _context.SaveChanges();
+            }
             return RedirectToAction(nameof(Index));
         }
     }
