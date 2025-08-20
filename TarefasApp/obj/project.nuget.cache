@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jzA1XI1mxz0=",
+  "dgSpecHash": "XZtvmkcU6aE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
+  "projectFilePath": "C:\\Users\\Alunos\\Documents\\lc bixo doido\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alunos\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Alunos\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

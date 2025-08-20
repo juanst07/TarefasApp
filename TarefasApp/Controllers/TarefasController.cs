@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using TarefasApp.Models;
 using TarefasApp.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TarefasApp.Controllers
 {
-    public class TarefasController : Controller
+        [Authorize]
+        public class TarefasController : Controller
     {
         private readonly AppDbContext _context;
 

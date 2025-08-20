@@ -2304,24 +2304,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alunos\\.nuget\\packages\\": {}
+    "C:\\Users\\Alunos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
+      "projectUniqueName": "C:\\Users\\Alunos\\Documents\\lc bixo doido\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
       "projectName": "TarefasApp",
-      "projectPath": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
+      "projectPath": "C:\\Users\\Alunos\\Documents\\lc bixo doido\\TarefasApp\\TarefasApp\\TarefasApp.csproj",
       "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alunos\\Documents\\Arthur 2025 tlgd\\TarefasApp\\TarefasApp\\obj\\",
+      "outputPath": "C:\\Users\\Alunos\\Documents\\lc bixo doido\\TarefasApp\\TarefasApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2376,7 +2383,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.107/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
